@@ -31,7 +31,7 @@ public class BlogService {
     public Article update(long id, UpdateArticleRequest request){
         Article article = blogRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("not found"+id));
-        article.update(request.getTitle(),request.getContent());
+        article.update(request.getTitle(),request.getContent(),request.getImageUrl());
         return article;
     }
 }

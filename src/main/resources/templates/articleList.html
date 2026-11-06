@@ -19,6 +19,11 @@
         <div class="card">
             <div class="card-header" th:text="${item.id}">
             </div>
+            <img th:if="${item.imageUrl != null and item.imageUrl != ''}"
+                 th:src="${item.imageUrl}"
+                 class="card-img-top"
+                 alt="게시글 이미지"
+                 style="max-height: 300px; object-fit: cover;">
             <div class="card-body">
                 <h5 class="card-title" th:text="${item.title}"></h5>
                 <p class="card-text" th:text="${item.content}"></p>

@@ -14,6 +14,7 @@ public class ArticleViewResponse {
     private String content;
     private String imageUrl;
     private LocalDateTime createdAt;
+    private String author;
 
     public ArticleViewResponse(Article article){
         this.id = article.getId();
@@ -21,5 +22,6 @@ public class ArticleViewResponse {
         this.content= article.getContent();
         this.imageUrl=article.getImageUrl();
         this.createdAt=article.getCreatedAt();
+        this.author=article.getAuthor();
     }
 }

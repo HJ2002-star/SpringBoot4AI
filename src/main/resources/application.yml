@@ -17,3 +17,7 @@ spring:
       max-request-size: 10MB
 app:
   upload-dir: uploads
+
+jwt:
+  issuer: ajufresh@gmail.com
+  secret_key: study-springboot

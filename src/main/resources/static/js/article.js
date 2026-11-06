@@ -81,6 +81,7 @@ if (aiThumbnailButton) {
                 content: content
             }),
             headers: {
+                Authorization: 'Bearer ' + localStorage.getItem('access_token'),
                 'Content-Type': 'application/json',
             },
         }).then((response) => {
@@ -199,6 +200,7 @@ if (getSuggestionButton) {
         fetch('/api/ai-suggestions', {
             method: 'POST',
             headers: {
+                Authorization: 'Bearer ' + localStorage.getItem('access_token'),
                 'Content-Type': 'application/json',
             },
             body: body
